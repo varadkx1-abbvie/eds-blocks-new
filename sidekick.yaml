@@ -1,4 +1,4 @@
-# Sidekick Configuration for Allergan Aesthetics
-project: "Allergan Aesthetics"
+# Sidekick Configuration
+project: "EDS Blocks - Allergan Aesthetics"
 host: author-p48761-e275513.adobeaemcloud.com
-mountpoint: /content/allergan-aesthetics
+mountpoint: /content/eds-blocks-new
