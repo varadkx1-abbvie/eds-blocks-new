@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p48761-e275513.adobeaemcloud.com/bin/franklin.delivery/eds-blocks-new/eds-blocks-new/main"
-    type: "markup"
-    suffix: ".html"
+    url: 'https://author-p48761-e275513.adobeaemcloud.com/bin/franklin.delivery/varadkx1-abbvie/eds-blocks-new/main'
+    type: 'markup'
+    suffix: '.html'
