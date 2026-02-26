@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "http://localhost:4502/bin/franklin.delivery/allergan-aesthetics/allergan-aesthetics/main"
+    type: "markup"
+    suffix: ".html"

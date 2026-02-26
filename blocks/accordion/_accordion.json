@@ -1,0 +1,54 @@
+{
+  "definitions": [
+    {
+      "title": "Accordion",
+      "id": "accordion",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Accordion",
+              "model": "accordion"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "accordion",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "items",
+          "label": "Accordion Items",
+          "valueType": "string",
+          "multi": true,
+          "fields": [
+            {
+              "component": "text",
+              "name": "title",
+              "label": "Title",
+              "valueType": "string"
+            },
+            {
+              "component": "richtext",
+              "name": "content",
+              "label": "Content",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "boolean",
+          "name": "multiExpand",
+          "label": "Allow Multiple Open",
+          "valueType": "boolean"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

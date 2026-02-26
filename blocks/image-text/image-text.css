@@ -1,0 +1,73 @@
+.image-text {
+  padding: var(--spacing-3xl) 0;
+}
+
+.image-text-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-3xl);
+  align-items: center;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+}
+
+.image-text-image {
+  position: relative;
+}
+
+.image-text-image picture {
+  display: block;
+}
+
+.image-text-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-lg);
+}
+
+.image-text-content {
+  padding: var(--spacing-xl);
+}
+
+.image-text-content h1,
+.image-text-content h2,
+.image-text-content h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.image-text-content p {
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.image-text-content .button-container {
+  margin-top: var(--spacing-xl);
+}
+
+/* Reversed layout */
+.image-text.reversed .image-text-wrapper {
+  direction: rtl;
+}
+
+.image-text.reversed .image-text-content {
+  direction: ltr;
+}
+
+/* Mobile responsive */
+@media (width < 768px) {
+  .image-text-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .image-text-content {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .image-text.reversed .image-text-wrapper {
+    direction: ltr;
+  }
+}

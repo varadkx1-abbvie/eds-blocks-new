@@ -142,6 +142,97 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "items",
+        "label": "Accordion Items",
+        "valueType": "string",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Title",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "content",
+            "label": "Content",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "name": "multiExpand",
+        "label": "Allow Multiple Open",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Banner Content",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "label": "Banner Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Info",
+            "value": "info"
+          },
+          {
+            "name": "Warning",
+            "value": "warning"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brand-grid",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "brands",
+        "label": "Brand Cards",
+        "valueType": "string",
+        "multi": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Brand Logo",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Brand Name",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Link URL",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -212,6 +303,35 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "image-text",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Text Content",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "reversed",
+        "label": "Reverse Layout",
+        "valueType": "boolean"
       }
     ]
   }

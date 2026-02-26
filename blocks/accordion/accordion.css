@@ -1,0 +1,97 @@
+.accordion {
+  margin: var(--spacing-xl) 0;
+}
+
+.accordion-item {
+  border: var(--border-width) solid var(--color-gray-200);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.accordion-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: var(--color-white);
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.accordion-button[aria-expanded="true"] {
+  background-color: var(--color-gray-100);
+}
+
+.accordion-title {
+  flex: 1;
+  padding-right: var(--spacing-lg);
+}
+
+.accordion-icon {
+  transition: transform var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-button[aria-expanded="true"] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow);
+}
+
+.accordion-panel.is-open {
+  max-height: 5000px;
+  transition: max-height var(--transition-slow);
+}
+
+.accordion-panel > * {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: var(--color-white);
+}
+
+.accordion-panel p:first-child {
+  margin-top: 0;
+}
+
+.accordion-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Safety information variant */
+.accordion.safety-info .accordion-button {
+  background-color: #fef2f2;
+  color: #991b1b;
+  font-weight: var(--font-weight-bold);
+}
+
+.accordion.safety-info .accordion-item {
+  border-color: var(--color-warning);
+  border-width: var(--border-width-2);
+}
+
+@media (width < 768px) {
+  .accordion-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .accordion-panel > * {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}

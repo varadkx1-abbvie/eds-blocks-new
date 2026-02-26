@@ -10,14 +10,16 @@
  * governing permissions and limitations under the License.
  */
 
+@import url('tokens.css');
+
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --background-color: var(--color-white);
+  --light-color: var(--color-gray-100);
+  --dark-color: var(--color-gray-600);
+  --text-color: var(--color-black);
+  --link-color: var(--color-accent);
+  --link-hover-color: var(--color-primary);
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
