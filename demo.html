@@ -7,14 +7,25 @@
     <meta name="description" content="Allergan Aesthetics EDS blocks demonstration">
 
     <!-- Load EDS styles -->
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <script type="module">
-      // Load EDS scripts
-      import { loadEager, loadLazy, loadDelayed } from './scripts/aem.js';
+      // Load EDS scripts and initialize
+      const { loadEager, loadLazy, loadDelayed, decorateBlocks, loadBlocks } = await import('./scripts/aem.js');
+
+      // Wait for DOM to be ready
+      if (document.readyState === 'loading') {
+        await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve));
+      }
 
       // Initialize page
       await loadEager(document);
+
+      // Manually decorate and load blocks
+      const main = document.querySelector('main');
+      decorateBlocks(main);
+      await loadBlocks(main);
+
       await loadLazy(document);
       loadDelayed();
     </script>
